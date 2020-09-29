@@ -108,6 +108,13 @@ impl Condition {
                 let t = BigInt::from_u16(*threshold).unwrap().to_signed_bytes_be();
                 let mut elems = asn_data(&vec![t]);
                 elems.push(asn_choice(1, &asns));
+
+                println!("subconds begin");
+                for child in asns {
+                    println!("asns[]={}", hex::encode(encode_asn(&child)));
+                }
+                println!("subconds end");
+   
                 hash_asn(&ASN1Block::Sequence(0, elems))
             }
             Anon { fingerprint, .. } => fingerprint.clone(),
