@@ -267,7 +267,8 @@ fn x690sort(asns: &mut Vec<ASN1Block>) {
     asns.sort_by(|b, a| { // reversed
         let va = encode_asn(a);
         let vb = encode_asn(b);
-        va.len().cmp(&vb.len()).then_with(|| va.cmp(&vb))
+        //va.len().cmp(&vb.len()).then_with(|| va.cmp(&vb))
+        va.len().cmp(&vb.len()).then_with(|| vb.cmp(&va))
     })
 }
 
