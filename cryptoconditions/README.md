@@ -1,10 +1,12 @@
+#Notes on 'cryptoconditions' library
 
-This is the 'cryptoconditions' library for Komodo cc modules development
+This is the 'cryptoconditions' library for Komodo cc modules development.
+
 Dev language: rust
 
-It also could be compiled as a wasm with wasm pack, use this cmd:
+It also could be compiled as a wasm with wasm-pack, use this cmd to build wasm:
 
 `wasm-pack build --target nodejs`
 
-See cryptoconditions_bs.js for supported js api 
+See cryptoconditions_bs.js for supported javascript cryptoconditions api 
 
